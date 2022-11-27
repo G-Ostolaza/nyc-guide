@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>New York City Guide</h1>
+<h2>{{ activity | title }}</h2>
+
+<ul>
+    {% for venue in activities %}
+    <li>
+        <a href="{% url 'venue' borough activity venue %} ">
+            {{ venue|title }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
