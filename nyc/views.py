@@ -19,8 +19,18 @@ class BoroughView(View):
 
 
 class ActivityView(View):
-    pass
+    def get(self, request, borough, activity):
+        return render(
+            request=request,
+            template_name='activities.html',
+            context={{'activity' : activity , 'borough' : borough, 'venues': boroughs[borough][activity].keys()}}
+        )
 
 
 class VenueView(View):
-    pass
+    def get(self, request, borough, activity, venue):
+        return render(
+            request=request,
+            template_name='venue.html',
+            context={'borough' : borough, 'activity' : activity, 'venue' : venue, 'description':boroughs[borough][activity][venue].get('description')}
+        )
