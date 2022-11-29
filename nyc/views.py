@@ -27,10 +27,13 @@ class ActivityView(View):
         )
 
 
-class VenueView(View):
-    def get(self, request, borough, activity, venue):
+class VenueView(View): 
+    '''View is rendering for borough/activity in urls.py.
+    The Borough and Activity arguments are strings taken in from the url.'''
+    def get(self, request, borough, activity, venue): 
+        venue_text = boroughs[borough][activity][venue].get('description')
         return render(
             request=request,
             template_name='venue.html',
-            context={'borough' : borough, 'activity' : activity, 'venue' : venue, 'description':boroughs[borough][activity][venue].get('description')}
+            context={'borough' : borough, 'activity' : activity, 'venue' : venue, 'description': venue_text}
         )
