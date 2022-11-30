@@ -31,5 +31,5 @@ To start the server enter the command python manage.py runserver. The App will b
 
 ---
 ### Purpose of App
-This application was designed to provide a directory of information on different activities to do New York City. Seperated by each of New Yorks Boroughs.
+This application was designed to provide a directory of information on different activities to do in New York City. Seperated by each of New Yorks` Boroughs.
 
