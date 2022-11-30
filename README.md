@@ -4,6 +4,14 @@
 Gabriel Ostolaza and Ahmad Bright
 
 ---
+
+### Clone repository from Github ###
+
+```
+  git clone <repository> <path>
+```
+
+
 ### Instuctions on how to run this project
 1. Enter directory of the project in your Terminal (nyc-guide)
 
@@ -17,14 +25,26 @@ python -m venv venv or python3 -m venv venv.
 4. To activate the virtual environment you must remain in this directory and run the command 
 ```
 source venv/bin/activate for MacOS systems or venv\Scripts\activate.bat on Windows systems.
-```
 
+```
+### Exit virtual environment
+```
+Enter the command "deactivate"
+
+```
 5. To Install Django remain in this directory and run the command pip install django, you may need to also update this if a prompt is given. You will see a command that states 
 ```
 "To update, run: pip install --upgrade pip", run this command if prompted.
 ```
 
-6. To Run the application, we must now start the server. 
+6. ### Project Dependencies ###
+```
+pip install django
+pip freeze install
+requirements.txt
+```
+
+7. To Run the application, we must now start the server. 
 ```
 To start the server enter the command python manage.py runserver. The App will be hosted on http://127.0.0.1:8000/
 ```
